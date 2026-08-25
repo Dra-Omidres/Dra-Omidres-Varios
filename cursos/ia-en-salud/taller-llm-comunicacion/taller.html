@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@page { size: A4; margin: 12mm 13mm; }
+* { box-sizing: border-box; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.4pt; line-height: 1.32; color: #1a1a1a; margin: 0; }
+h1 { font-size: 12.5pt; margin: 0 0 1mm 0; color: #0f3d63; letter-spacing: -.2px; }
+.sub { font-size: 8pt; color: #444; margin: 0 0 1.5mm 0; }
+.meta { font-size: 7.4pt; color: #555; border-bottom: 1.6pt solid #0f3d63; padding-bottom: 1.8mm; margin-bottom: 2.6mm; }
+h2 { font-size: 8.8pt; color: #fff; background: #0f3d63; padding: 1.1mm 2mm; margin: 3mm 0 1.6mm 0; border-radius: 1.5px; text-transform: uppercase; letter-spacing: .4px; }
+h3 { font-size: 8.2pt; margin: 2mm 0 1mm 0; color: #0f3d63; }
+.box { border: .6pt solid #b9c6d2; background: #f6f9fc; padding: 1.8mm 2.4mm; border-radius: 2px; }
+.mono { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 7.5pt; line-height: 1.3; }
+p { margin: 0 0 1.2mm 0; text-align: justify; }
+ul { margin: .6mm 0 1.2mm 0; padding-left: 4mm; }
+li { margin-bottom: .5mm; }
+table { width: 100%; border-collapse: collapse; font-size: 7.5pt; margin-top: 1mm; }
+th { background: #0f3d63; color: #fff; padding: 1.2mm 1.6mm; text-align: left; font-size: 7.4pt; }
+td { border: .5pt solid #b9c6d2; padding: 1.4mm 1.6mm; vertical-align: top; }
+tr:nth-child(even) td { background: #f6f9fc; }
+.c1 { width: 17%; font-weight: bold; color: #0f3d63; }
+.c2 { width: 42%; }
+.c3 { width: 41%; }
+.flag { color: #a3121b; font-weight: bold; }
+.ok { color: #14612e; font-weight: bold; }
+.tag { display: inline-block; background: #0f3d63; color: #fff; font-size: 7pt; padding: .3mm 1.4mm; border-radius: 2px; margin-right: 1.2mm; font-weight: bold; }
+.note { font-size: 7.2pt; color: #555; font-style: italic; margin-top: 1mm; }
+.two { display: flex; gap: 3mm; }
+.two > div { flex: 1; }
+sup { color: #a3121b; font-weight: bold; font-size: 6.5pt; }
+</style></head><body>
+
+<h1>Taller: Comunicación Médico-Paciente Asistida por LLMs y Control de Alucinaciones</h1>
+<p class="sub">Aplicación de ingeniería de prompts clínicos para la traducción de informes técnicos y auditoría de alucinaciones del modelo.</p>
+<div class="meta"><b>Materia:</b> Inteligencia Artificial, Automatización y Salud Digital &nbsp;|&nbsp; <b>Autora:</b> Dra. Omidres Pérez de Carvelli &nbsp;|&nbsp; <b>Modalidad:</b> Trabajo autónomo práctico &nbsp;|&nbsp; <b>Modelo empleado:</b> Claude (Anthropic) &nbsp;|&nbsp; <b>Fecha:</b> 25/08/2026</div>
+
+<h2>1. Texto clínico técnico original seleccionado</h2>
+<div class="box mono">
+<b>ESTUDIO:</b> Ecografía de tiroides y cuello con Doppler color.<br>
+<b>HALLAZGOS:</b> Glándula tiroides de situación normal, volumen total 18,4 cc. Ecoestructura heterogénea con patrón micronodular difuso e hipoecogenicidad parenquimatosa, con incremento de la vascularización al Doppler color. En lóbulo derecho, tercio medio, nódulo sólido hipoecoico de 14 × 11 × 9 mm, de márgenes lobulados, más alto que ancho, con microcalcificaciones puntiformes y sin halo periférico. Puntuación ACR TI-RADS: 5 (9 puntos). En lóbulo izquierdo, nódulo espongiforme de 7 mm, ACR TI-RADS 1. Adenopatía en compartimento lateral derecho, nivel IV, de 12 mm, con pérdida del hilio graso y vascularización periférica anárquica.<br>
+<b>IMPRESIÓN DIAGNÓSTICA:</b> Tiroiditis crónica linfocitaria. Nódulo tiroideo derecho ACR TI-RADS 5 con adenopatía cervical nivel IV de características sonográficas sospechosas. Se sugiere correlación con PAAF ecoguiada del nódulo y del ganglio.
+</div>
+<p class="note">Verificación de anonimización (PHI): se eliminaron nombre, documento de identidad, edad, sexo, fecha del estudio, número de historia clínica, institución y nombre del radiólogo informante. El fragmento conserva únicamente datos morfométricos no reidentificables.</p>
+
+<h2>2. Prompt estructurado utilizado</h2>
+<div class="box mono">
+<span class="tag">ROL</span> Actúa como un médico especialista en endocrinología con amplia experiencia en comunicación empática con familiares de pacientes.<br><br>
+<span class="tag">CONTEXTO</span> Un familiar directo del paciente, sin ninguna formación médica ni sanitaria, ha recibido un informe de ecografía tiroidea y no comprende su contenido. Se encuentra preocupado y necesita entender qué significa el estudio antes de la próxima consulta.<br><br>
+<span class="tag">TAREA</span> Traduce el siguiente informe radiológico a lenguaje claro y accesible, calibrado para una persona con nivel de educación secundaria. [Se adjunta el informe del apartado 1].<br><br>
+<span class="tag">RESTRICCIONES</span> Explica en palabras sencillas toda la jerga técnica (TI-RADS, adenopatía, hipoecoico, PAAF, microcalcificaciones). Mantén un tono cálido y contenedor. Aclara de forma explícita que esta explicación no sustituye la consulta con el médico tratante. No indiques tratamientos ni pronósticos.<br><br>
+<span class="tag">FORMATO</span> Estructura la respuesta en exactamente 3 secciones tituladas: (1) Diagnóstico Explicado, (2) Pasos a Seguir, (3) Preguntas Frecuentes.
+</div>
+
+<h2>3. Respuesta textual generada por el modelo</h2>
+<div class="box">
+<h3>1) Diagnóstico Explicado</h3>
+<p>La ecografía es una prueba con ondas de sonido que permite ver la tiroides, la glándula con forma de mariposa situada en la parte baja del cuello. El estudio encontró tres cosas:</p>
+<ul>
+<li><b>La glándula está inflamada de forma crónica</b> ("tiroiditis crónica linfocitaria", también llamada <i>tiroiditis de Hashimoto</i>): las defensas del cuerpo atacan lentamente a la tiroides. Es una condición muy frecuente y habitualmente se controla bien.<sup>①</sup></li>
+<li><b>Un bulto (nódulo) en el lado derecho</b> de 14 mm, aproximadamente del tamaño de un guisante grande. El radiólogo lo clasificó como <b>TI-RADS 5</b>. TI-RADS es un semáforo del 1 al 5 que mide cuánto llaman la atención las características del nódulo: el 5 es la categoría que más atención requiere, porque el bulto tiene bordes irregulares, crece más en altura que en anchura y contiene pequeños depósitos de calcio ("microcalcificaciones"). <b>Esto no es un diagnóstico de cáncer</b>, sino una señal de que hay que estudiarlo. De hecho, más del 90 % de los nódulos tiroideos resultan ser benignos.<sup>②</sup></li>
+<li><b>Un ganglio aumentado de tamaño</b> en el lado derecho del cuello ("adenopatía"). Los ganglios son filtros del sistema de defensa y es habitual que se agranden cuando hay inflamación cerca, como ocurre con la tiroiditis.<sup>③</sup> También hay un segundo nódulo pequeño en el lado izquierdo, clasificado como TI-RADS 1, que es completamente tranquilizador.</li>
+</ul>
+<h3>2) Pasos a Seguir</h3>
+<p>El informe recomienda una <b>PAAF ecoguiada</b> (punción aspirativa con aguja fina): se introduce una aguja muy delgada, guiada por ecografía, para tomar una pequeña muestra de células del nódulo y del ganglio y analizarlas al microscopio. Es un procedimiento ambulatorio, se realiza con anestesia local, dura unos 15 minutos y el paciente vuelve a casa el mismo día.<sup>④</sup> Lo recomendable es solicitar cita con el endocrinólogo lo antes posible y llevar el informe y las imágenes. Probablemente también se soliciten análisis de hormona tiroidea (TSH), ya que la tiroiditis de Hashimoto suele terminar produciendo hipotiroidismo y requerir tratamiento con levotiroxina.<sup>⑤</sup></p>
+<h3>3) Preguntas Frecuentes</h3>
+<p><b>¿Significa que mi familiar tiene cáncer?</b> No. La ecografía no puede diagnosticar cáncer; solo describe cómo se ve el nódulo. Únicamente el análisis de las células obtenidas por la punción puede dar una respuesta.<br>
+<b>¿La punción duele?</b> Es molesta, similar a una extracción de sangre, pero muy tolerable.<sup>④</sup><br>
+<b>¿Es urgente?</b> No es una emergencia, pero tampoco conviene posponerlo: lo adecuado es agendar la valoración en las próximas semanas.<sup>⑥</sup></p>
+<p style="margin-top:1.5mm"><i>Esta explicación tiene una finalidad exclusivamente informativa y no sustituye la consulta con el médico tratante, quien es el único que puede interpretar el estudio en el contexto clínico completo del paciente.</i></p>
+</div>
+
+<h2>4. Matriz de evaluación comparativa de calidad</h2>
+<table>
+<tr><th class="c1">Criterio</th><th class="c2">Resultado obtenido en la IA</th><th class="c3">Análisis crítico de la estudiante</th></tr>
+<tr>
+<td class="c1">Fidelidad clínica</td>
+<td>Conservó la estructura descriptiva del informe y tradujo correctamente los tres hallazgos principales, la clasificación TI-RADS y la conducta sugerida (PAAF). Explicó con precisión que la ecografía no establece diagnóstico histológico.</td>
+<td><b>Parcialmente fiel, con omisiones relevantes.</b> Omitió el valor semiológico de la <b>pérdida del hilio graso</b> y de la <b>vascularización periférica anárquica</b> del ganglio, que son precisamente los signos que le confieren carácter sospechoso. También omitió que el informe indica PAAF <b>del ganglio además del nódulo</b>, dato clave porque implica sospecha de extensión ganglionar. La traducción es comprensible pero atenúa la jerarquía de gravedad del original.</td>
+</tr>
+<tr>
+<td class="c1">Detección de alucinaciones</td>
+<td>No se detectaron invenciones factuales groseras, pero sí <b>seis extrapolaciones no contenidas en el texto fuente</b> (marcadas ①–⑥ en el apartado 3).</td>
+<td><span class="flag">Hallazgos críticos:</span> <b>②</b> El dato «más del 90 % de los nódulos son benignos» <b>no está en el informe</b> y además es estadísticamente engañoso aplicado a un TI-RADS 5, categoría con riesgo de malignidad estimado superior al 20 % según ACR. <b>③</b> Atribuir la adenopatía a la tiroiditis es una <b>reinterpretación falsa</b> que contradice la impresión diagnóstica original. <b>⑤</b> Anticipar hipotiroidismo y levotiroxina es un <b>pronóstico y tratamiento inventados</b>, además de una violación directa de la restricción del prompt. <b>①</b> «Se controla bien», <b>④</b> detalles del procedimiento (anestesia, 15 minutos, dolor) y <b>⑥</b> el marco temporal «próximas semanas» son datos añadidos sin respaldo en la fuente.</td>
+</tr>
+<tr>
+<td class="c1">Tono y empatía</td>
+<td>Lenguaje cálido, uso eficaz de analogías cotidianas («glándula con forma de mariposa», «semáforo del 1 al 5»), registro adecuado al nivel solicitado y disclaimer final correctamente incorporado.</td>
+<td><b>Excelente en forma, riesgoso en fondo.</b> La instrucción de mantener un tono cálido operó como <b>vector de las alucinaciones</b>: todas las extrapolaciones detectadas van en dirección tranquilizadora, ninguna en dirección alarmista. El modelo priorizó la contención emocional sobre la exactitud, produciendo un texto que un familiar leería como reconfortante cuando el informe original es de sospecha alta. <span class="flag">La empatía no calibrada degradó la seguridad del mensaje.</span></td>
+</tr>
+</table>
+
+<h2>5. Reflexión crítica</h2>
+<div class="box">
+<p>La instrucción de mantener un tono cálido indujo un sesgo de minimización: el modelo añadió una estadística tranquilizadora ausente del informe y reinterpretó una adenopatía sospechosa como reactiva, invirtiendo el mensaje clínico. Las alucinaciones no fueron errores factuales groseros, sino extrapolaciones plausibles y difíciles de detectar sin criterio experto. Concluyo que la empatía y la fidelidad clínica compiten cuando no se acotan explícitamente. Un prompt seguro requiere un sexto elemento: prohibir toda información no contenida en la fuente y exigir marcar lo omitido. La responsabilidad de validar la salida antes de entregarla al familiar es intransferible del médico.</p>
+<p class="note" style="margin-top:1.4mm">(98 palabras)</p>
+</div>
+
+</body></html>
