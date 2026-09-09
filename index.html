@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materiales docentes — Dra. Omidres Pérez de Carvelli</title>
+<style>
+:root{
+  --navy:#0f3d63; --navy-soft:#f6f9fc; --line:#b9c6d2;
+  --ink:#1a1a1a; --muted:#555; --red:#a3121b; --green:#14612e;
+}
+*{box-sizing:border-box}
+body{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:var(--ink); background:#fff; margin:0;
+  line-height:1.55; font-size:16px;
+}
+.wrap{max-width:880px; margin:0 auto; padding:32px 20px 64px}
+header{border-bottom:3px solid var(--navy); padding-bottom:18px; margin-bottom:28px}
+h1{font-size:1.5rem; color:var(--navy); margin:0 0 6px; letter-spacing:-.3px}
+.sub{color:var(--muted); font-size:.95rem; margin:0}
+h2{
+  font-size:.85rem; color:#fff; background:var(--navy);
+  padding:7px 12px; margin:34px 0 16px; border-radius:3px;
+  text-transform:uppercase; letter-spacing:.6px;
+}
+.card{
+  border:1px solid var(--line); background:var(--navy-soft);
+  border-radius:4px; padding:18px 20px; margin-bottom:16px;
+}
+.card h3{margin:0 0 4px; font-size:1.05rem; color:var(--navy)}
+.card .case{font-size:.9rem; color:var(--muted); margin:0 0 12px}
+.tag{
+  display:inline-block; background:var(--navy); color:#fff; font-size:.7rem;
+  padding:2px 7px; border-radius:3px; margin-right:6px; font-weight:bold;
+  letter-spacing:.3px; vertical-align:1px;
+}
+.actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:4px}
+a.btn{
+  display:inline-block; text-decoration:none; font-size:.87rem; font-weight:bold;
+  padding:8px 14px; border-radius:3px; border:1px solid var(--navy);
+  color:var(--navy); background:#fff; transition:background .15s,color .15s;
+}
+a.btn:hover{background:var(--navy); color:#fff}
+a.btn.solid{background:var(--navy); color:#fff}
+a.btn.solid:hover{background:#0b2f4d}
+ul{padding-left:20px; margin:8px 0}
+li{margin-bottom:5px; font-size:.94rem}
+footer{
+  margin-top:44px; padding-top:16px; border-top:1px solid var(--line);
+  font-size:.83rem; color:var(--muted);
+}
+code{
+  font-family:"DejaVu Sans Mono",Consolas,monospace; font-size:.85em;
+  background:var(--navy-soft); border:1px solid var(--line);
+  padding:1px 5px; border-radius:3px;
+}
+@media (max-width:520px){ .actions{flex-direction:column} a.btn{text-align:center} }
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <h1>Materiales docentes — Dra. Omidres Pérez de Carvelli</h1>
+  <p class="sub">Endocrinología · Medicina Interna · Salud Digital</p>
+</header>
+
+<h2>Inteligencia Artificial, Automatización y Salud Digital</h2>
+
+<p><b>Taller: Comunicación Médico-Paciente Asistida por LLMs y Control de Alucinaciones.</b>
+Ingeniería de prompts clínicos para traducir informes técnicos a lenguaje comprensible,
+con auditoría explícita de las alucinaciones del modelo.</p>
+
+<p>Cada opción desarrolla las mismas cinco secciones: texto clínico original anonimizado,
+prompt estructurado, respuesta generada, matriz de evaluación comparativa y reflexión crítica.</p>
+
+<div class="card">
+  <h3><span class="tag">OPCIÓN A</span> Patología tiroidea</h3>
+  <p class="case">Ecografía de tiroides con Doppler color — nódulo ACR TI-RADS 5 con adenopatía cervical nivel IV, sobre tiroiditis crónica linfocitaria.</p>
+  <div class="actions">
+    <a class="btn solid" href="cursos/ia-en-salud/taller-llm-comunicacion/opcion-a-tiroides/taller.html">Ver taller</a>
+    <a class="btn" href="cursos/ia-en-salud/taller-llm-comunicacion/opcion-a-tiroides/Taller_IA_Salud_Omidres_Perez.pdf">Descargar PDF</a>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="tag">OPCIÓN B</span> Menopausia y salud ósea</h3>
+  <p class="case">Densitometría ósea (DXA) — osteoporosis posmenopáusica establecida con fractura previa por fragilidad, insuficiencia de vitamina D y síndrome climatérico severo.</p>
+  <div class="actions">
+    <a class="btn solid" href="cursos/ia-en-salud/taller-llm-comunicacion/opcion-b-menopausia/taller.html">Ver taller</a>
+    <a class="btn" href="cursos/ia-en-salud/taller-llm-comunicacion/opcion-b-menopausia/Taller_IA_Salud_Menopausia_Omidres_Perez.pdf">Descargar PDF</a>
+  </div>
+</div>
+
+<h2>Cómo trabajar estos materiales</h2>
+<ul>
+  <li><b>Ver o presentar:</b> abre esta página desde cualquier navegador, en computadora o teléfono.</li>
+  <li><b>Editar:</b> desde GitHub en el navegador, o clonando el repositorio. Ver el <code>README.md</code>.</li>
+  <li><b>Usar sin internet:</b> descarga el repositorio en ZIP y abre <code>index.html</code>. Los archivos son autocontenidos y funcionan offline.</li>
+</ul>
+
+<footer>
+  Material formativo. Los casos clínicos están anonimizados: no contienen información identificable de pacientes (PHI).
+  Este contenido tiene fines docentes y no sustituye la consulta médica.
+</footer>
+
+</div></body></html>
