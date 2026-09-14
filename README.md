@@ -6,12 +6,47 @@ Endocrinología · Medicina Interna · Salud Digital
 
 ```
 index.html                        Portal de entrada (abre este archivo)
+calculadoras/
+  └── fenotipos-obesidad/
+      └── calculadora.html         Fenotipos de obesidad (modo paciente / modo profesional)
 cursos/
   └── ia-en-salud/
       └── taller-llm-comunicacion/
           ├── opcion-a-tiroides/     taller.html + PDF   (nódulo tiroideo ACR TI-RADS 5)
           └── opcion-b-menopausia/   taller.html + PDF   (osteoporosis posmenopáusica)
 ```
+
+## Calculadora de fenotipos de obesidad
+
+Estima a cuál de los cuatro perfiles descritos por Acosta et al. (*Obesity* 2021) se
+aproxima más el patrón del paciente, a partir de un cuestionario de 16 ítems.
+
+**Antes de usarla, lee esto.** El fenotipado de referencia requiere comida *ad libitum*,
+gammagrafía de vaciamiento gástrico, calorimetría indirecta y escala HADS. **Un cuestionario
+no reproduce esos resultados**: en el único estudio publicado que lo intentó (Gołacki et al.,
+*Endokrynol Pol* 2026), el 50,3 % de los pacientes quedó sin fenotipo asignable, y los autores
+concluyen que la herramienta es exploratoria y no apta para guiar tratamiento. La calculadora
+lo declara de forma explícita en pantalla. **Es material educativo y de preparación de consulta,
+no un instrumento diagnóstico.**
+
+Características:
+
+- **Dos modos.** *Paciente*: lenguaje sencillo, sin fármacos ni dosis. *Profesional*: métodos
+  de referencia, campos para mediciones objetivas (GER, T½ de vaciamiento, HADS) y racional
+  farmacológico con sus límites declarados.
+- **Confirma primero la adiposidad** con los criterios ADA 2026 (IMC, cintura, cintura/talla,
+  umbrales para origen asiático), igual que la calculadora de IMC.
+- **Admite perfiles múltiples y el resultado "no concluyente"**, que es un desenlace frecuente
+  y esperable, no un fallo.
+- **Bloqueos de seguridad.** Señala cuándo el paciente *no* debe iniciar cambios por su cuenta:
+  insulina o sulfonilureas, enfermedad renal, embarazo, anticoagulación, cirugía bariátrica
+  previa, señales de trastorno de conducta alimentaria, y —para ejercicio— evento cardiovascular
+  reciente, retinopatía proliferativa, lesión activa en el pie, hipertensión no controlada o
+  movilidad muy limitada.
+- **Deriva a valoración** ante señales de hipotiroidismo, ingesta nocturna o riesgo en salud mental.
+
+Antes de publicarla, edita las dos constantes del bloque `CONFIGURACIÓN` al inicio del
+`<script>`: `LINK_AGENDA` (enlace de agendamiento) y `LINK_IMC` (calculadora de IMC y cintura).
 
 Los archivos `taller.html` son **autocontenidos**: no dependen de internet, de hojas
 de estilo externas ni de imágenes. Se abren en cualquier navegador y se imprimen en A4.
