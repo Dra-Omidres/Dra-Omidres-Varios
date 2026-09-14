@@ -8,7 +8,8 @@ Endocrinología · Medicina Interna · Salud Digital
 index.html                        Portal de entrada (abre este archivo)
 calculadoras/
   └── fenotipos-obesidad/
-      └── calculadora.html         Fenotipos de obesidad (modo paciente / modo profesional)
+      ├── calculadora.html         Fenotipos de obesidad (modo paciente / modo profesional)
+      └── NIVEL-3-especificacion.md  Diseno del producto de pago (borrador, sin implementar)
 cursos/
   └── ia-en-salud/
       └── taller-llm-comunicacion/
@@ -47,6 +48,13 @@ Características:
 
 Antes de publicarla, edita las dos constantes del bloque `CONFIGURACIÓN` al inicio del
 `<script>`: `LINK_AGENDA` (enlace de agendamiento) y `LINK_IMC` (calculadora de IMC y cintura).
+
+### Nivel 3 — propuesta de alimentación y ejercicio (en diseño)
+
+`calculadoras/fenotipos-obesidad/NIVEL-3-especificacion.md` documenta el producto de
+pago que continuaría el embudo: qué debe hacer, qué no debe automatizarse nunca, los
+criterios de exclusión que bloquean la venta **antes** del cobro, y las decisiones
+comerciales pendientes. Es un borrador para revisión; no está implementado.
 
 Los archivos `taller.html` son **autocontenidos**: no dependen de internet, de hojas
 de estilo externas ni de imágenes. Se abren en cualquier navegador y se imprimen en A4.
