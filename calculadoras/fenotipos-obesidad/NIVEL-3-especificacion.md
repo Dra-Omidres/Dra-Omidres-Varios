@@ -298,6 +298,71 @@ no trata medicación, pero sí para el modo profesional del nivel 2.
 
 ## Anexo — Migración a un instrumento validado (pendiente)
 
+> **Actualizado.** El artículo original se obtuvo y la EFCA **ya está implementada**
+> en la calculadora como instrumento seleccionable. Lo que sigue documenta lo
+> verificado en la fuente y **un problema de licencia que afecta directamente a
+> este nivel 3**.
+
+### ⚠️ Bloqueo de licencia para el producto de pago
+
+El artículo es Open Access bajo **CC BY-NC-SA 4.0**. Las tres letras importan:
+
+| Cláusula | Qué implica |
+|---|---|
+| **BY** — Atribución | Hay que citar a las autoras. Ya se hace, en el formulario y en el resultado |
+| **NC** — No comercial | **Prohíbe el uso comercial.** Un producto de pago que incorpore la EFCA entra en conflicto directo con esta cláusula |
+| **SA** — Compartir igual | Las obras derivadas deben licenciarse en los mismos términos. Incorporarla puede obligar a publicar la calculadora bajo CC BY-NC-SA |
+
+**Consecuencia práctica:** la EFCA es utilizable en los niveles 1 y 2, que son
+gratuitos. **No es utilizable tal cual en el nivel 3 de pago.** Las opciones son:
+
+1. **Pedir autorización expresa a las autoras.** Contacto publicado en el artículo:
+   Vanesa Erica Anger, Centro Dra. Mónica Katz, Buenos Aires, veanger@gmail.com.
+   Es el camino limpio y probablemente viable.
+2. **Mantener la EFCA solo en la parte gratuita** y que el producto de pago use el
+   cuestionario propio o la anamnesis en consulta.
+3. **No usar la EFCA en ningún punto del embudo comercial.**
+
+**Esta decisión hay que tomarla antes de construir el nivel 3, no después.**
+
+### Conflicto de interés a declarar
+
+La publicación de validación fue **financiada por Novo Nordisk** (fabricante de
+liraglutida y semaglutida). Las autoras declaran no tener conflictos de interés y
+el artículo especifica que el financiador no influyó en el diseño, el análisis ni
+la interpretación. Aun así, **cuando la escala se use en material profesional o
+académico, esa financiación debe declararse.** La calculadora ya lo hace en el pie
+del resultado.
+
+### Limitaciones de la validación que conviene conocer
+
+- **Muestra no clínica.** 300 adultos reclutados por redes sociales en Argentina,
+  mayo de 2020. **IMC medio 26,4** — rango de sobrepeso, no de obesidad.
+- **87,7 % mujeres.** Representatividad limitada en varones.
+- **Estudio transversal.** No establece relación temporal con la ganancia de peso.
+- **Las autoras señalan explícitamente** que queda pendiente correlacionar los
+  fenotipos con el trastorno por atracón y el síndrome de ingesta nocturna. Por
+  tanto **la EFCA no sustituye el cribado de TCA** exigido en §5.
+
+### Lo verificado en la fuente
+
+- 16 ítems, Likert de 1 (nunca) a 5 (siempre). **El ítem 9 se invierte.**
+- Cinco subescalas: desorganización, hedónica, compulsiva, emocional/picoteo, hiperfagia.
+- Puntos de corte publicados (tabla II): total bajo ≤37, medio 38–48, alto ≥49.
+- α de Cronbach: total 0,81; subescalas 0,74–0,89.
+- Correlación con IMC: total r=0,44 (p<0,001); por subescala 0,21 a 0,38.
+
+**Nota de método.** La asignación de cada ítem a su subescala **no figura en el
+texto**: está en la figura 1, que es una imagen. Se dedujo a partir de los rangos
+mínimo y máximo de la tabla III —que fijan 3, 4, 2, 4 y 3 ítems— y del contenido de
+cada ítem frente a las definiciones publicadas. La deducción es única y consistente,
+pero **conviene contrastarla contra la figura 1 antes de usar la escala con
+pacientes.**
+
+---
+
+## Anexo antiguo — Migración a un instrumento validado
+
 El cuestionario actual de la calculadora de fenotipos **no está validado**. Existe una
 alternativa mejor y está en español.
 

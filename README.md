@@ -32,6 +32,12 @@ no un instrumento diagnóstico.**
 
 Características:
 
+- **Dos instrumentos seleccionables.** *Modelo de Acosta*: los cuatro fenotipos
+  fisiopatológicos, con cuestionario propio sin validar. *Escala EFCA*: instrumento
+  validado en español (Anger VE, Formoso J, Katz MT. *Nutr Hosp.* 2022;39(2):405-410),
+  16 ítems y cinco subescalas, reproducido bajo licencia CC BY-NC-SA 4.0 con la
+  atribución y la declaración de financiación exigidas. **Son taxonomías distintas y
+  la herramienta lo advierte de forma explícita.**
 - **Dos modos.** *Paciente*: lenguaje sencillo, sin fármacos ni dosis. *Profesional*: métodos
   de referencia, campos para mediciones objetivas (GER, T½ de vaciamiento, HADS) y racional
   farmacológico con sus límites declarados.

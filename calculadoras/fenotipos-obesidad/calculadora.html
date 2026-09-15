@@ -142,7 +142,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visi
 .alert.crit{border-color:var(--crit);background:var(--crit-soft)}
 .alert.warn{border-color:var(--warn);background:var(--warn-soft)}
 .alert.info{border-color:var(--line);background:var(--surface-2)}
-.alert b{display:block;margin-bottom:2px}
+.alert>div>b:first-child{display:block;margin-bottom:2px}
 table{border-collapse:collapse;width:100%;font-size:.93rem}
 th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700}
@@ -154,6 +154,9 @@ th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mu
 .gate h3{margin-bottom:6px}
 .gate .blocked{border-color:var(--crit);background:var(--crit-soft)}
 .pro-only{display:none}
+body[data-instr="efca"] .acosta-only{display:none}
+body[data-instr="acosta"] .efca-only{display:none}
+.lic{font-size:.84rem;color:var(--muted);border-left:3px solid var(--line);padding:6px 0 6px 12px;margin-top:10px}
 body[data-mode="pro"] .pro-only{display:block}
 body[data-mode="pro"] .pat-only{display:none}
 .refs{padding:10px 0 40px}
@@ -163,7 +166,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--muted);f
 footer .disc{max-width:82ch}
 @media print{.brandbar,form,.cta,.modebar{display:none}.grid{grid-template-columns:1fr}}
 </style></head>
-<body data-mode="pac">
+<body data-mode="pac" data-instr="acosta">
 
 <div class="brandbar"><div class="wrap">
   <div><b>Dra. Omidres Pérez de Carvelli</b> · Internista · Endocrinóloga</div>
@@ -179,7 +182,12 @@ footer .disc{max-width:82ch}
       <label><input type="radio" name="modo" value="pac" checked>Modo paciente</label>
       <label><input type="radio" name="modo" value="pro">Modo profesional</label>
     </div>
+    <div class="modeswitch" role="group" aria-label="Instrumento">
+      <label><input type="radio" name="instr" value="acosta" checked>Modelo de Acosta</label>
+      <label><input type="radio" name="instr" value="efca">Escala EFCA</label>
+    </div>
     <p class="modenote" id="modenote">Lenguaje sencillo, sin fármacos ni dosis. Orientado a preparar tu consulta.</p>
+    <p class="modenote" id="instrnote"><b>Modelo de Acosta:</b> los cuatro fenotipos fisiopatológicos. Cuestionario propio, <b>sin validar</b>.</p>
   </div>
 </div></header>
 
@@ -204,25 +212,32 @@ footer .disc{max-width:82ch}
       </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="efca-only">
+      <legend><span class="n">2</span>Escala de Fenotipos de Comportamiento Alimentario</legend>
+      <p class="hint" style="margin-bottom:4px">Indica con qué frecuencia te ocurre cada situación. Son los 16 ítems de la escala, en su redacción original.</p>
+      <div id="g-efca"></div>
+      <p class="lic">Anger VE, Formoso J, Katz MT. <i>Nutr Hosp</i>. 2022;39(2):405-410. doi:10.20960/nh.03849 · Reproducida bajo licencia <b>CC BY-NC-SA 4.0</b>.</p>
+    </fieldset>
+
+    <fieldset class="acosta-only">
       <legend><span class="n">2</span>Cerebro hambriento</legend>
       <p class="hint" style="margin-bottom:4px">Cuánta comida necesitas <em>durante</em> una comida para sentirte lleno/a.</p>
       <div id="g-cb"></div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="acosta-only">
       <legend><span class="n">3</span>Intestino hambriento</legend>
       <p class="hint" style="margin-bottom:4px">Cuánto te dura la sensación de saciedad <em>después</em> de comer.</p>
       <div id="g-ih"></div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="acosta-only">
       <legend><span class="n">4</span>Hambre emocional</legend>
       <p class="hint" style="margin-bottom:4px">Cuánto influyen las emociones en lo que comes.</p>
       <div id="g-he"></div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="acosta-only">
       <legend><span class="n">5</span>Quemador lento</legend>
       <p class="hint" style="margin-bottom:4px">Indicios indirectos de gasto energético bajo. <b>Atención:</b> este perfil no se puede estimar con preguntas; lo que sigue son solo pistas para orientar el estudio.</p>
       <div id="g-ql"></div>
@@ -411,6 +426,54 @@ footer .disc{max-width:82ch}
   };
   var ESCALA = ["Nunca","Rara vez","A veces","A menudo","Casi siempre"];
 
+  // ---- EFCA: Anger VE, Formoso J, Katz MT. Nutr Hosp 2022;39(2):405-410. CC BY-NC-SA 4.0 ----
+  // Los 16 items en su redaccion original. El item 9 puntua de forma inversa.
+  var EFCA_ITEMS = [
+    "Como hasta sentirme muy lleno.",
+    "Calmo mis emociones con comida.",
+    "Pido más comida cuando termino mi plato.",
+    "Tengo la costumbre de picotear (pequeñas ingestas entre las comidas principales, sin medir la cantidad).",
+    "Cuando empiezo a comer algo que me gusta mucho, me cuesta detenerme.",
+    "Suelo comer más de un plato en las comidas principales.",
+    "Picoteo entre comidas por ansiedad, aburrimiento, soledad, miedo, enojo, tristeza y/o cansancio.",
+    "Me siento tentado/a de comer cuando veo u huelo comida que me gusta, o cuando paso frente a un kiosco, una panadería, una pizzería o un local de comida rápida.",
+    "Desayuno todos los días.",
+    "Como en los momentos en que estoy: aburrido/a, ansioso/a, nervioso/a, triste, cansado/a, enojado/a y/o solo/a.",
+    "Salteo algunas —o al menos una— de las comidas principales (desayuno, almuerzo, merienda o cena).",
+    "Cuando estoy frente a comida que me gusta mucho, aunque no tenga hambre, termino comiéndola.",
+    "Como mucha comida en poco tiempo.",
+    "Cuando como algo que me gusta, finalizo toda la porción.",
+    "Cuando como algo que me gusta mucho, lo como muy rápido.",
+    "Paso más de 5 h al día sin comer."
+  ];
+  var EFCA_INV = [9];                       // item 9: puntuacion invertida
+  var EFCA_ESCALA = ["Nunca","Casi nunca","A veces","Casi siempre","Siempre"];
+
+  // Asignacion item -> subescala. DERIVADA, no leida directamente de la Figura 1:
+  // los rangos min/max de la Tabla III fijan el numero de items de cada subescala
+  // (3, 4, 2, 4, 3 = 16) y el contenido de cada item corresponde a una sola
+  // definicion publicada. Verificar contra la Figura 1 del articulo.
+  var EFCA_SUB = {
+    desorg:{ nom:"Desorganización", items:[9,11,16], cls:"f-ql",
+      def:"Saltear al menos una comida principal o pasar más de 5 horas sin comer.",
+      cortes:[4,6] },
+    hedon:{ nom:"Ingesta hedónica", items:[5,8,12,14], cls:"f-cb",
+      def:"Deseo de comer desencadenado por estímulos sensoriales (ver, oler) o cognitivos.",
+      cortes:[11,14] },
+    compul:{ nom:"Ingesta compulsiva", items:[13,15], cls:"f-ih",
+      def:"Ingesta rápida y excesiva de alimentos en períodos cortos de tiempo.",
+      cortes:[3,6] },
+    emoc:{ nom:"Ingesta emocional y picoteo", items:[2,4,7,10], cls:"f-he",
+      def:"Comer como forma de afrontar emociones negativas, o picoteo repetido entre comidas.",
+      cortes:[8,12] },
+    hiper:{ nom:"Hiperfagia", items:[1,3,6], cls:"f-ql",
+      def:"Consumo de porciones excesivas o de más de una porción en una sola comida.",
+      cortes:[5,8] }
+  };
+  var EFCA_TOTAL_CORTES = [37,48];
+  var NIVEL = ["Bajo","Medio","Alto"];
+  function nivelDe(v, c){ return v <= c[0] ? 0 : v <= c[1] ? 1 : 2; }
+
   var META = {
     cb:{ nom:"Cerebro hambriento", en:"hungry brain", cls:"f-cb",
          desc:"La señal de saciedad llega tarde durante la comida: necesitas más volumen para sentirte lleno/a.",
@@ -436,6 +499,30 @@ footer .disc{max-width:82ch}
           }).join('')+'</div></div>';
       }).join('');
     });
+  }
+
+  function pintaEfca(){
+    $('#g-efca').innerHTML = EFCA_ITEMS.map(function(q,i){
+      var n = i+1, inv = EFCA_INV.indexOf(n) >= 0;
+      return '<div class="item"><div class="q">'+n+'. '+esc(q)+(inv?' <span style="color:var(--muted);font-weight:400">(puntuación inversa)</span>':'')+'</div><div class="lik">'+
+        EFCA_ESCALA.map(function(e,v){
+          return '<label><input type="radio" name="e'+n+'" value="'+(v+1)+'"'+(v===0?' checked':'')+'>'+e+'</label>';
+        }).join('')+'</div></div>';
+    }).join('');
+  }
+
+  function leerEfca(){
+    var bruto = {}, sc = {}, total = 0;
+    for (var n=1; n<=16; n++){
+      var el = $('input[name="e'+n+'"]:checked');
+      var v = el ? +el.value : 1;
+      if (EFCA_INV.indexOf(n) >= 0) v = 6 - v;   // inversion
+      bruto[n] = v; total += v;
+    }
+    Object.keys(EFCA_SUB).forEach(function(k){
+      sc[k] = EFCA_SUB[k].items.reduce(function(a,n){ return a + bruto[n]; }, 0);
+    });
+    return {sc:sc, total:total};
   }
 
   function leer(){
@@ -523,7 +610,7 @@ footer .disc{max-width:82ch}
       p:'Puede corresponder a síndrome de ingesta nocturna o a un trastorno del sueño, y ninguno se resuelve con un plan de alimentación. Menciónalo en consulta.'});
     if (d.flags.indexOf('farmacos')>=0) a.push({k:'info', t:'Medicamentos que favorecen la ganancia de peso',
       p:'Puede existir una alternativa que no promueva el aumento de peso. Es una conversación con quien te los indicó. No suspendas nada por tu cuenta.'});
-    if (p.altos.indexOf('ql')>=0) a.push({k:'info', t:'Sobre el resultado de quemador lento',
+    if (p && p.altos.indexOf('ql')>=0) a.push({k:'info', t:'Sobre el resultado de quemador lento',
       p:'Este perfil es el único que no puede estimarse con preguntas. Un puntaje alto aquí significa "conviene estudiarlo", no "lo tienes". Confirmarlo exige calorimetría indirecta y valoración de composición corporal.'});
     return a;
   }
@@ -569,6 +656,41 @@ footer .disc{max-width:82ch}
     return h + '</div>';
   }
 
+  function barrasEfca(r){
+    var orden = Object.keys(EFCA_SUB).sort(function(a,b){
+      return nivelDe(r.sc[b],EFCA_SUB[b].cortes) - nivelDe(r.sc[a],EFCA_SUB[a].cortes) || r.sc[b]-r.sc[a];
+    });
+    var h = '<div class="bars">' + orden.map(function(k){
+      var m = EFCA_SUB[k], v = r.sc[k], max = m.items.length*5, min = m.items.length;
+      var niv = nivelDe(v, m.cortes);
+      var pct = (v-min)/(max-min)*100;
+      var cortePct = (m.cortes[1]+1-min)/(max-min)*100;
+      return '<div class="bar-row"><div class="top"><span class="name">'+m.nom+'</span>'+
+        '<span class="val">'+v+' / '+max+' <span style="font-weight:600;color:var(--muted);font-size:.85rem">· '+NIVEL[niv]+'</span></span></div>'+
+        '<div class="track"><div class="fill '+m.cls+'" style="width:'+pct.toFixed(1)+'%"></div><div class="cut" style="left:'+cortePct.toFixed(1)+'%"></div></div>'+
+        '<div class="desc">'+esc(m.def)+'</div></div>';
+    }).join('') + '</div>';
+    return {html:h, orden:orden};
+  }
+
+  function renderEfca(d, ad){
+    var r = leerEfca();
+    var nivTotal = nivelDe(r.total, EFCA_TOTAL_CORTES);
+    var b = barrasEfca(r);
+    var altas = b.orden.filter(function(k){ return nivelDe(r.sc[k], EFCA_SUB[k].cortes) === 2; });
+    var tono = ['ok','warn','high'][nivTotal];
+    var h = '<div class="section"><h3>Tu perfil según la EFCA</h3>';
+    h += '<div class="dx" style="margin-top:6px"><h2 style="font-size:1.25rem">Puntuación total '+r.total+' / 80</h2><span class="pill tone-'+tono+'">Nivel '+NIVEL[nivTotal].toLowerCase()+'</span></div>';
+    h += '<p class="why">Puntos de corte publicados: bajo hasta 37, medio de 38 a 48, alto desde 49.</p>';
+    if (altas.length) h += '<p class="why" style="margin-top:8px">En nivel alto: <b>'+altas.map(function(k){return EFCA_SUB[k].nom;}).join(' · ')+'</b>.</p>';
+    else h += '<p class="why" style="margin-top:8px">Ninguna subescala alcanza el nivel alto.</p>';
+    h += b.html;
+    h += '<p class="hint" style="margin-top:10px">Los puntos de corte de cada subescala son los publicados por las autoras (tabla II del artículo). La marca vertical señala el inicio del nivel alto.</p>';
+    h += '<div class="alert info"><span class="mk">i</span><div><b>Qué mide y qué no</b>La EFCA describe <b>rasgos de conducta alimentaria</b>. No es el modelo de los cuatro fenotipos fisiopatológicos de Acosta: es una taxonomía distinta, de cinco subescalas. Y las propias autoras señalan que queda pendiente correlacionarla con el trastorno por atracón y el síndrome de ingesta nocturna, de modo que <b>no sustituye el cribado de trastornos de la conducta alimentaria</b>.</div></div>';
+    h += '<p class="lic">Anger VE, Formoso J, Katz MT. Escala de Fenotipos de Comportamiento Alimentario (EFCA), análisis factorial confirmatorio y propiedades psicométricas. <i>Nutr Hosp</i>. 2022;39(2):405-410. doi:10.20960/nh.03849. Reproducida bajo licencia CC BY-NC-SA 4.0. Validada en 300 adultos hispanohablantes de Argentina (87,7 % mujeres, IMC medio 26,4), muestra no clínica reclutada por redes sociales. Publicación financiada por Novo Nordisk; las autoras declaran no tener conflictos de interés.</p>';
+    return h + '</div>';
+  }
+
   function render(){
     var d = leer();
     if (!(d.peso>0 && d.talla>0 && d.edad>0)){
@@ -593,6 +715,22 @@ footer .disc{max-width:82ch}
       h += '<div class="alert info"><span class="mk">i</span><div><b>Sin exceso de adiposidad</b>El marco de fenotipos se describió y validó en personas con obesidad, así que aquí es solo orientativo. Tus respuestas siguen siendo útiles para entender tu relación con la comida, pero no constituyen una clasificación.</div></div>';
 
     // --- Paso 2: perfil ---
+    if (document.body.dataset.instr === 'efca'){
+      h += renderEfca(d, ad);
+      h += derivacion(d, bl);
+      if (av.length){
+        h += '<div class="section"><h3>Atención</h3>';
+        av.forEach(function(a){ h += '<div class="alert '+a.k+'"><span class="mk">'+(a.k==='info'?'i':'!')+'</span><div><b>'+esc(a.t)+'</b>'+esc(a.p)+'</div></div>'; });
+        h += '</div>';
+      }
+      if (!pro) h += '<div class="cta"><div class="eyebrow" style="color:#FFB07A">Siguiente paso</div>'+
+           '<h3 style="color:var(--navy-ink);margin-top:4px">Lleva este resultado a consulta</h3>'+
+           '<p>Este perfil describe tus rasgos alimentarios. No es un diagnóstico: en consulta se interpreta junto a tu historia y tu examen.</p>'+
+           '<a class="btn" href="'+LINK_AGENDA+'">Agendar consulta</a></div>';
+      $('#out').innerHTML = h;
+      $('#res').scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
     h += '<div class="section"><h3>Tu perfil</h3>';
     if (p.concluyente){
       var nombres = p.altos.map(function(k){ return META[k].nom; });
@@ -642,6 +780,17 @@ footer .disc{max-width:82ch}
 
   // ---------- Eventos ----------
   pinta();
+  pintaEfca();
+
+  $$('input[name=instr]').forEach(function(r){
+    r.addEventListener('change', function(){
+      document.body.dataset.instr = r.value;
+      $('#instrnote').innerHTML = r.value === 'efca'
+        ? '<b>Escala EFCA:</b> instrumento <b>validado</b> en español (Anger et al., <i>Nutr Hosp</i> 2022). Cinco subescalas conductuales. No es el modelo de Acosta.'
+        : '<b>Modelo de Acosta:</b> los cuatro fenotipos fisiopatológicos. Cuestionario propio, <b>sin validar</b>.';
+      if ($('#out').children.length > 1) render();
+    });
+  });
 
   $('#f').addEventListener('submit', function(e){ e.preventDefault(); render(); });
 
