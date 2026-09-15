@@ -52,8 +52,16 @@ Características:
   movilidad muy limitada.
 - **Deriva a valoración** ante señales de hipotiroidismo, ingesta nocturna o riesgo en salud mental.
 
-Antes de publicarla, edita las dos constantes del bloque `CONFIGURACIÓN` al inicio del
-`<script>`: `LINK_AGENDA` (enlace de agendamiento) y `LINK_IMC` (calculadora de IMC y cintura).
+Los enlaces de salida ya apuntan a las páginas reales del CRM:
+
+- `LINK_AGENDA` → `https://draomidresperez.com/consulta-enlinea`
+- `LINK_IMC` → `https://draomidresperez.com/calculadora-imc-y-cintura-2026`
+
+> **Pendiente antes de difundir la calculadora.** En el CRM, la página
+> `/calculadora-imc-y-cintura-2026` y su página de agradecimiento
+> `/gracias-evaluacion-imc` están en estado **borrador**. Hasta que se publiquen
+> desde el panel, el enlace de salida no resuelve. `/consulta-enlinea` sí está
+> publicada.
 
 ### Nivel 3 — propuesta de alimentación y ejercicio (en diseño)
 
