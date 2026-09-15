@@ -293,3 +293,65 @@ confirmarse.
 guiado de Acosta 2021 no se pudo contrastar contra el texto completo. No se
 reproduce en ningún material hasta confirmarla. Irrelevante para el nivel 3, que
 no trata medicación, pero sí para el modo profesional del nivel 2.
+
+---
+
+## Anexo — Migración a un instrumento validado (pendiente)
+
+El cuestionario actual de la calculadora de fenotipos **no está validado**. Existe una
+alternativa mejor y está en español.
+
+### EFCA — Escala de Fenotipos de Comportamiento Alimentario
+
+**Cita:** Anger VE, Formoso J, Katz MT. Escala de Fenotipos de Comportamiento
+Alimentario (EFCA), análisis factorial confirmatorio y propiedades psicométricas.
+*Nutr Hosp.* 2022;39(2):405. doi:10.20960/nh.03849 · Acceso abierto.
+Escala original: *Actualización en Nutrición.* 2020;21(3):73-79.
+
+**Lo verificado:**
+
+| Aspecto | Dato |
+|---|---|
+| Estructura | 16 ítems, cinco subescalas |
+| Subescalas | Hedónico · compulsivo · emocional · desorganizado · hiperfágico |
+| Respuesta | Likert de 1 (nunca) a 5 (siempre) |
+| Particularidad | El ítem 9 puntúa de forma **inversa** |
+| Muestra de validación | 300 adultos |
+| Consistencia interna | α > 0,70 en escala total y subescalas |
+| Análisis factorial confirmatorio | CFI 0,97 · TLI 0,96 · RMSEA 0,05 · SRMR 0,04 |
+| Validez concurrente | Correlación positiva y significativa con IMC |
+| Validaciones posteriores | Portugués de Brasil (*Arch Endocrinol Metab* 2025, α=0,83); uso en México (*Horizonte Sanitario* 2025, α=0,86) |
+| Uso con fármacos | *Nutrients* 2026, cohorte de São Paulo, perfiles de respuesta por fármaco antiobesidad |
+
+**Lo que falta y por qué:** el texto de los 16 ítems, el método de puntuación
+detallado y los puntos de corte de clasificación. No se pudieron obtener porque el
+entorno de construcción tiene bloqueado el acceso a SciELO, CONICET, DOI, LILACS y
+SciELO México por política de red. **El artículo es de acceso abierto**: se descarga
+directamente desde SciELO España o mediante el DOI.
+
+**Advertencia conceptual que no debe perderse.** La EFCA **no** es la versión en
+español del modelo de Acosta. Son cinco fenotipos conductuales de desarrollo
+independiente en Argentina. Solo el componente emocional es comparable. Si se migra,
+la herramienta deja de hablar de "los cuatro fenotipos de Acosta" y pasa a hablar de
+"los cinco fenotipos conductuales de la EFCA". Es un cambio de marco, no una
+traducción.
+
+### Alternativa complementaria — NZ-EBQ
+
+Cubre tres de los cuatro fenotipos de Acosta (saciación, saciedad posprandial,
+alimentación emocional) y **no mide quemador lento**. Validado en n=977
+(*Appetite* 2023) y revalidado en *Nutrients* 2025 con solo 12,3–13,0 % de casos no
+clasificables, muy por debajo del 50,3 % de Gołacki. En inglés: requeriría traducción
+y validación propia, que es un proyecto de investigación, no una tarea de desarrollo.
+
+### Tres opciones
+
+| Opción | Marco | Ventaja | Coste |
+|---|---|---|---|
+| **A** · Mantener el cuestionario actual | Acosta, 4 fenotipos | Ya funciona; coherente con la literatura que la Dra. divulga | Sin validar. Declarado en pantalla |
+| **B** · Migrar a EFCA | EFCA, 5 fenotipos | Instrumento validado, en español, desarrollado en la región | Cambia el marco. Requiere los ítems y verificar condiciones de uso |
+| **C** · Híbrido | Acosta para explicar, EFCA para medir | Lo mejor de ambos | Riesgo de confundir dos taxonomías. **Solo si se explicita la diferencia** |
+
+**Requisitos previos a cualquier migración:** obtener el artículo original, verificar
+las condiciones de uso de la escala y confirmar si los autores exigen permiso para
+su reproducción en una herramienta digital de acceso público.
