@@ -352,12 +352,22 @@ del resultado.
 - α de Cronbach: total 0,81; subescalas 0,74–0,89.
 - Correlación con IMC: total r=0,44 (p<0,001); por subescala 0,21 a 0,38.
 
-**Nota de método.** La asignación de cada ítem a su subescala **no figura en el
-texto**: está en la figura 1, que es una imagen. Se dedujo a partir de los rangos
-mínimo y máximo de la tabla III —que fijan 3, 4, 2, 4 y 3 ítems— y del contenido de
-cada ítem frente a las definiciones publicadas. La deducción es única y consistente,
-pero **conviene contrastarla contra la figura 1 antes de usar la escala con
-pacientes.**
+**Agrupación de ítems — verificada contra la figura 1.** La asignación no figura en
+el texto del artículo, solo en la figura 1. Se renderizó esa página del PDF y se leyó
+directamente. Coincide en las cinco subescalas. Cargas factoriales estandarizadas
+(todas p < 0,001):
+
+| Subescala | Ítems y cargas |
+|---|---|
+| Desorganización | 11 (.94) · 9 (.54) · 16 (.52) |
+| Ingesta compulsiva | 13 (.94) · 15 (.71) |
+| Ingesta hedónica | 5 (.87) · 8 (.56) · 12 (.73) · 14 (.44) |
+| Hiperfagia | 1 (.70) · 3 (.67) · 6 (.62) |
+| Ingesta emocional con picoteo | 2 (.84) · 4 (.69) · 7 (.86) · 10 (.91) |
+
+El ítem 14 es el de carga más baja de la escala (.44), seguido del 16 (.52) y el
+9 (.54). Conviene tenerlo presente al interpretar las subescalas hedónica y de
+desorganización.
 
 ---
 
