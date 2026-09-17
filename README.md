@@ -8,8 +8,7 @@ Endocrinología · Medicina Interna · Salud Digital
 index.html                        Portal de entrada (abre este archivo)
 calculadoras/
   └── fenotipos-obesidad/
-      ├── calculadora.html         Fenotipos de obesidad (modo paciente / modo profesional)
-      └── NIVEL-3-especificacion.md  Diseno del producto de pago (borrador, sin implementar)
+      └── calculadora.html         Fenotipos de obesidad (modo paciente / modo profesional)
 cursos/
   └── ia-en-salud/
       └── taller-llm-comunicacion/
@@ -63,12 +62,6 @@ Los enlaces de salida ya apuntan a las páginas reales del CRM:
 > desde el panel, el enlace de salida no resuelve. `/consulta-enlinea` sí está
 > publicada.
 
-### Nivel 3 — propuesta de alimentación y ejercicio (en diseño)
-
-`calculadoras/fenotipos-obesidad/NIVEL-3-especificacion.md` documenta el producto de
-pago que continuaría el embudo: qué debe hacer, qué no debe automatizarse nunca, los
-criterios de exclusión que bloquean la venta **antes** del cobro, y las decisiones
-comerciales pendientes. Es un borrador para revisión; no está implementado.
 
 Los archivos `taller.html` son **autocontenidos**: no dependen de internet, de hojas
 de estilo externas ni de imágenes. Se abren en cualquier navegador y se imprimen en A4.
