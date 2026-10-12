@@ -1,52 +1,55 @@
 <!--
-BORRADOR PARA WIKIPEDIA EN ESPAÑOL — NO PUBLICAR SIN REVISIÓN
-Las frases marcadas con {{cita requerida}} solo están respaldadas por el CV de la autora.
-Antes de publicar: conseguir una fuente independiente para cada una o eliminarla.
+BORRADOR PARA WIKIPEDIA EN ESPAÑOL — NO PUBLICAR SIN REVISIÓN (versión 2)
+Todo el texto visible tiene al menos una fuente externa.
+Lo que solo consta en los CV de la autora está al final, en el bloque «PENDIENTES».
 -->
 {{Ficha de persona
 | nombre             = Omidres Pérez de Carvelli
 | nombre completo    = Omidres de la Consolación Pérez de Carvelli
 | nacionalidad       = Venezolana
 | residencia         = [[Cuenca (Ecuador)|Cuenca]], [[Ecuador]]
-| educación          = [[Universidad de Oriente (Venezuela)|Universidad de Oriente]]<br />[[Universidad Central de Venezuela]]
 | ocupación          = Médica internista y endocrinóloga
 | área               = [[Endocrinología]], [[diabetes mellitus]], [[telemedicina]]
 }}
 
-'''Omidres de la Consolación Pérez de Carvelli''' es una médica [[Venezuela|venezolana]] especialista en [[medicina interna]] y en [[endocrinología]] y metabolismo, que reside en [[Cuenca (Ecuador)|Cuenca]], Ecuador.<ref name="hjca2018" /> Su trabajo se centra en la aplicación de la [[telemedicina]] al tratamiento de la [[diabetes mellitus]].<ref name="crn" /><ref name="diabeteshoy" />
-
-== Formación ==
-Se graduó como médica cirujana en la [[Universidad de Oriente (Venezuela)|Universidad de Oriente]] en 1998.{{cita requerida}} Se especializó en medicina interna en la [[Universidad Central de Venezuela]], con sede en el [[Hospital José María Vargas|Hospital Vargas de Caracas]] (2003). Después se especializó en endocrinología y metabolismo en el mismo hospital (2006).{{cita requerida}}
+'''Omidres de la Consolación Pérez de Carvelli''' es una médica [[Venezuela|venezolana]] especialista en [[medicina interna]] y en [[endocrinología]] y metabolismo, que reside en [[Cuenca (Ecuador)|Cuenca]], Ecuador.<ref name="hjca2018" /> Ha publicado sobre [[diabetes gestacional]] y [[vitamina D]], y en los últimos años su trabajo se ha centrado en la aplicación de la [[telemedicina]] a la atención de la [[diabetes mellitus]].<ref name="crn" /><ref name="diabeteshoy" />
 
 == Trayectoria ==
-En Venezuela participó como coautora en una investigación sobre variantes del [[herpesvirus humano 8]] en pacientes con [[sarcoma de Kaposi]] asociado al [[sida]], publicada en ''[[Clinical Infectious Diseases]]'' en 2003.<ref name="cid2003" />
+=== Venezuela ===
+En 2003 fue coautora de una carta científica en ''[[Clinical Infectious Diseases]]'' sobre variantes del [[herpesvirus humano 8]] en pacientes venezolanos con [[sarcoma de Kaposi]] asociado al [[sida]].<ref name="cid2003" />
 
-En Ecuador trabajó en el servicio de endocrinología del [[Instituto Ecuatoriano de Seguridad Social]] (IESS) en [[Azogues]]. Allí fue autora principal de un estudio sobre los niveles de [[vitamina D]] en 122 pacientes, publicado en la ''Revista Médica HJCA'' en 2018.<ref name="hjca2018" /> Ejerce como especialista en endocrinología y metabolismo en el Hospital del Río, en Cuenca.<ref name="hdelrio" />
+Como endocrinóloga trabajó en la Unidad Endocrino-Metabólica de Oriente (UNEMOR), en [[Cumaná]], estado [[Estado Sucre|Sucre]].<ref name="manual2016" /> Fue coautora del capítulo sobre diabetes gestacional del consenso publicado por la ''Revista Venezolana de Endocrinología y Metabolismo'' en 2012.<ref name="rvem2012" /> También participó como autora en el ''Manual Venezolano de Diabetes Gestacional'' (2016), publicado en la misma revista.<ref name="manual2016" />
+
+=== Ecuador ===
+Trabajó en el servicio de endocrinología del [[Instituto Ecuatoriano de Seguridad Social]] (IESS) en [[Azogues]]. Allí fue autora principal de un estudio sobre los niveles de [[vitamina D]] en 122 pacientes, publicado en la ''Revista Médica HJCA'' en 2018.<ref name="hjca2018" /> Ejerce como especialista en endocrinología y metabolismo en el Hospital del Río, en Cuenca.<ref name="hdelrio" />
 
 === Telemedicina ===
-Preside la Organización Internacional de Telemedicina y Telesalud (OITT).<ref name="crn" /><ref name="venezolano" /> Ha promovido el uso de la plataforma de telemedicina MEDDI Diabetes para la atención de personas con diabetes.<ref name="saludiario" /> En la [[Asociación Latinoamericana de Diabetes]] (ALAD) coordina el grupo de Salud Digital y Diabetes.{{cita requerida}}
+Preside la Organización Internacional de Telemedicina y Telesalud (OITT).<ref name="crn" /><ref name="venezolano" /> Ha promovido el uso de la plataforma de telemedicina MEDDI Diabetes para la atención de personas con diabetes.<ref name="saludiario" />
 
-== Publicaciones ==
-=== Artículos (selección) ===
+== Publicaciones (selección) ==
+=== Artículos ===
 * Hernández DE, Masquelier B, Pérez O, Oliver M, Fleury HJ. «Human herpesvirus 8 variants in Venezuelan patients with AIDS-related Kaposi sarcoma». ''Clin Infect Dis''. 2003;36(3):385-6.<ref name="cid2003" />
+* Pérez O, Saba T, Padrón M, Molina R. «Diabetes mellitus gestacional». ''Rev Venez Endocrinol Metab''. 2012;10(Supl 1):22-33.<ref name="rvem2012" />
+* «Manual Venezolano de Diabetes Gestacional». ''Rev Venez Endocrinol Metab''. 2016;14(1).<ref name="manual2016" />
 * Pérez de Carvelli O, Torres González Á, Espinosa García O. «Niveles de 25-hidroxivitamina D en la población que acude al Servicio de Endocrinología del IESS, Azogues–Ecuador, 2017». ''Rev Med HJCA''. 2018;10(2):133-8.<ref name="hjca2018" />
 
 === Libros ===
-* ''Diabetes. Guía de consejos médicos para pacientes y sus familiares'' (2010).{{cita requerida}}
-* ''Controlando la diabetes en un click'' (2020).{{cita requerida}}
-* ''Transforma tu consulta al mundo digital'' (2020), en coautoría con Miguel Guevara.{{cita requerida}}
+* ''Diabetes: guía de consejos médicos para pacientes y sus familiares''. Con Franklin Ablan Candia. ISBN 979-8-5870-5014-3.<ref name="amazonlibro" />
 
 == Reconocimientos ==
-* Premio Dr. Moros Ghersi a la mejor tesis del año, de la Sociedad Venezolana de Medicina Interna (2003).{{cita requerida}}
-* Premio en Ciencias de la Salud (&laquo;Health Sciences&raquo;) otorgado por la sociedad SIISDET (2022).<ref name="venezolano" /><ref name="somostuvoz" />
+* Premio en Ciencias de la Salud otorgado por la sociedad SIISDET (2022).<ref name="venezolano" /><ref name="somostuvoz" /><ref name="diariocatolico" />
 
 == Referencias ==
 {{listaref|refs=
-<ref name="hjca2018">{{cita publicación |apellidos1=Pérez de Carvelli |nombre1=Omidres de la Consolación |apellidos2=Torres González |nombre2=Álvaro |apellidos3=Espinosa García |nombre3=Odalis |título=Niveles de 25-hidroxivitamina D en la población que acude al Servicio de Endocrinología del IESS, Azogues–Ecuador, 2017 |publicación=Revista Médica HJCA |volumen=10 |número=2 |páginas=133-138 |año=2018 |doi=10.14410/2018.10.2.ao.21 |url=https://revistamedicahjca.iess.gob.ec/ojs/index.php/HJCA/article/view/120}}</ref>
 <ref name="cid2003">{{cita publicación |apellidos1=Hernández |nombre1=Dimas E. |apellidos2=Masquelier |nombre2=Bernard |apellidos3=Pérez |nombre3=Omidres |apellidos4=Oliver |nombre4=Margarita |apellidos5=Fleury |nombre5=Hervé J. A. |título=Human herpesvirus 8 variants in Venezuelan patients with AIDS-related Kaposi sarcoma |publicación=Clinical Infectious Diseases |volumen=36 |número=3 |páginas=385-386 |año=2003 |doi=10.1086/346041 |pmid=12539086}}</ref>
-<ref name="hdelrio">{{cita web |título=Directorio médico: Endocrinología |url=https://www.hospitaldelrio.com.ec/directorio-medico/endocrinologia/18/1/ |editorial=Hospital Universitario del Río |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="rvem2012">{{cita publicación |apellidos1=Pérez |nombre1=Omidres |apellidos2=Saba |nombre2=T. |apellidos3=Padrón |nombre3=M. |apellidos4=Molina |nombre4=R. |título=Diabetes mellitus gestacional |publicación=Revista Venezolana de Endocrinología y Metabolismo |volumen=10 |número=Supl 1 |páginas=22-33 |año=2012 |url=http://www.saber.ula.ve/handle/123456789/36725}}</ref>
+<ref name="manual2016">{{cita publicación |título=Manual Venezolano de Diabetes Gestacional |publicación=Revista Venezolana de Endocrinología y Metabolismo |volumen=14 |número=1 |año=2016 |url=https://ve.scielo.org/scielo.php?script=sci_arttext&pid=S1690-31102016000100007}}</ref>
+<ref name="hjca2018">{{cita publicación |apellidos1=Pérez de Carvelli |nombre1=Omidres de la Consolación |apellidos2=Torres González |nombre2=Álvaro |apellidos3=Espinosa García |nombre3=Odalis |título=Niveles de 25-hidroxivitamina D en la población que acude al Servicio de Endocrinología del IESS, Azogues–Ecuador, 2017 |publicación=Revista Médica HJCA |volumen=10 |número=2 |páginas=133-138 |año=2018 |doi=10.14410/2018.10.2.ao.21 |url=https://revistamedicahjca.iess.gob.ec/ojs/index.php/HJCA/article/view/120}}</ref>
+<ref name="hdelrio">{{cita web |título=Directorio médico: Endocrinología |url=https://www.hospitaldelrio.com.ec/directorio-medico/endocrinologia/18/1/ |editorial=Hospital del Río |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="amazonlibro">{{cita libro |apellidos1=Pérez de Carvelli |nombre1=Omidres |apellidos2=Ablan Candia |nombre2=Franklin |título=Diabetes: guía de consejos médicos para pacientes y sus familiares |isbn=9798587050143}}</ref>
 <ref name="venezolano">{{cita web |título=Omidres Pérez, médico venezolana, gana premio por hallazgos contra la diabetes |url=https://elvenezolanonews.com/2022/03/09/omidres-perez-medico-venezolana-gana-premio-por-hallazgos-contra-la-diabetes/ |obra=El Venezolano News |fecha=9 de marzo de 2022 |fechaacceso=12 de octubre de 2026}}</ref>
 <ref name="somostuvoz">{{cita web |título=Doctora Omidres Pérez recibirá premio Health Sciences por su investigación contra la diabetes |url=https://somostuvoz.net/doctora-omidres-perez-recibira-premio-health-sciences-por-su-investigacion-contra-la-diabetes/ |obra=Somos Tu Voz |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="diariocatolico">{{cita web |título=Venezolana gana Premio Ciencias de la Salud por sus hallazgos en la lucha contra la diabetes |url=https://diariocatolico.press/venezolana-gana-premio-ciencias-de-la-salud-por-sus-hallazgos-en-la-lucha-contra-la-diabetes/ |obra=Diario Católico |fechaacceso=12 de octubre de 2026}}</ref>
 <ref name="crn">{{cita web |título=Dra. Omidres Pérez: La telemedicina minimiza inconvenientes de la diabetes |url=https://crn.com.ve/salud/dra-omidres-perez-la-telemedicina-minimiza-inconvenientes-de-la-diabetes/ |obra=Circuito Regional de Noticias |fechaacceso=12 de octubre de 2026}}</ref>
 <ref name="diabeteshoy">{{cita web |título=La telemedicina: un nuevo amanecer en la autogestión de la diabetes |url=https://revistadiabeteshoy.org/la-telemedicina-un-nuevo-amanecer-en-la-autogestion-de-la-diabetes/ |obra=Revista Diabetes Hoy |fechaacceso=12 de octubre de 2026}}</ref>
 <ref name="saludiario">{{cita web |título=Entrevista Saludiario: Dra. Omidres Pérez de Carvelli experta en Diabetes |url=https://www.saludiario.com/entrevista-saludiario-dra-omidres-perez-de-carvelli-experta-en-diabetes/ |obra=Saludiario |fechaacceso=12 de octubre de 2026}}</ref>
@@ -60,3 +63,21 @@ Preside la Organización Internacional de Telemedicina y Telesalud (OITT).<ref n
 [[Categoría:Médicos de Venezuela]]
 [[Categoría:Endocrinólogos]]
 [[Categoría:Emigrantes venezolanos hacia Ecuador]]
+
+<!--
+=== PENDIENTES: solo constan en los CV (2016, 2020, 2024 y 2026). Añadir si aparece una fuente externa ===
+- Médica cirujana, Universidad de Oriente, núcleo Anzoátegui (1998). Medicina interna, UCV / Hospital Vargas (2003). Endocrinología, Hospital Vargas (2006).
+- Adjunta en el Hospital Vargas, en el Hospital Carlos J. Bello (Cruz Roja) y en el Hospital Universitario Antonio Patricio de Alcalá (Cumaná).
+- Directora de UNEMOR, Cumaná (2009-2016). La fuente de 2016 solo confirma la afiliación, no el cargo de directora.
+- Artículos en Archivos del Hospital Vargas (2001-2004) y en la Revista de la Sociedad Venezolana de Medicina Interna (2003).
+- Capítulo «Microalbuminuria...» en el libro «Diez años de avances en Diabetes Mellitus» (Chacín L., 2004).
+- Columnas: «Diabetes y algo más» en El Nacional (2008-2010), «Alborada en salud» en Diario Región y «Semillas de salud» en La Prensa de Monagas.
+- FENADIABETES: secretaria de relaciones públicas (2006-2008), vicepresidenta (2008-2010) y vocal (2013-2015).
+- ALAD: subdelegada y delegada por Venezuela (2008-2013), coordinadora de la Región Andina (2016-2019), secretaria del Comité de Ética y miembro del Comité Ejecutivo hasta 2022.
+- Guías de la SVEM (tiroides, síndrome metabólico, diabetes 2010, diabetes y embarazo) y guía ALAD de nefropatía diabética.
+- Premio Dr. Moros Ghersi 2003, de la SVMI, al mejor trabajo de las XXI Jornadas de Egresandos (no a la «mejor tesis»).
+- Programa MeTTAS (desde 2015), IESS Quevedo (2016-2017), Hospital del Día IESS Azogues (desde 2017).
+- Investigadora acreditada por SENESCYT (2025), Norma Técnica de Telesalud del MSP (2025), Guías ALAD-OITT 2025 y TED-2 LATAM.
+- Doctorado honoris causa SIISDET (2025).
+- Fecha y lugar de nacimiento: NO incluir salvo que estén publicados en una fuente fiable (política de biografías de personas vivas).
+-->
