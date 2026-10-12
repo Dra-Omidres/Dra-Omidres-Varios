@@ -1,0 +1,62 @@
+<!--
+BORRADOR PARA WIKIPEDIA EN ESPAÑOL — NO PUBLICAR SIN REVISIÓN
+Las frases marcadas con {{cita requerida}} solo están respaldadas por el CV de la autora.
+Antes de publicar: conseguir una fuente independiente para cada una o eliminarla.
+-->
+{{Ficha de persona
+| nombre             = Omidres Pérez de Carvelli
+| nombre completo    = Omidres de la Consolación Pérez de Carvelli
+| nacionalidad       = Venezolana
+| residencia         = [[Cuenca (Ecuador)|Cuenca]], [[Ecuador]]
+| educación          = [[Universidad de Oriente (Venezuela)|Universidad de Oriente]]<br />[[Universidad Central de Venezuela]]
+| ocupación          = Médica internista y endocrinóloga
+| área               = [[Endocrinología]], [[diabetes mellitus]], [[telemedicina]]
+}}
+
+'''Omidres de la Consolación Pérez de Carvelli''' es una médica [[Venezuela|venezolana]] especialista en [[medicina interna]] y en [[endocrinología]] y metabolismo, que reside en [[Cuenca (Ecuador)|Cuenca]], Ecuador.<ref name="hjca2018" /> Su trabajo se centra en la aplicación de la [[telemedicina]] al tratamiento de la [[diabetes mellitus]].<ref name="crn" /><ref name="diabeteshoy" />
+
+== Formación ==
+Se graduó como médica cirujana en la [[Universidad de Oriente (Venezuela)|Universidad de Oriente]] en 1998.{{cita requerida}} Se especializó en medicina interna en la [[Universidad Central de Venezuela]], con sede en el [[Hospital José María Vargas|Hospital Vargas de Caracas]] (2003). Después se especializó en endocrinología y metabolismo en el mismo hospital (2006).{{cita requerida}}
+
+== Trayectoria ==
+En Venezuela participó como coautora en una investigación sobre variantes del [[herpesvirus humano 8]] en pacientes con [[sarcoma de Kaposi]] asociado al [[sida]], publicada en ''[[Clinical Infectious Diseases]]'' en 2003.<ref name="cid2003" />
+
+En Ecuador trabajó en el servicio de endocrinología del [[Instituto Ecuatoriano de Seguridad Social]] (IESS) en [[Azogues]]. Allí fue autora principal de un estudio sobre los niveles de [[vitamina D]] en 122 pacientes, publicado en la ''Revista Médica HJCA'' en 2018.<ref name="hjca2018" /> Ejerce como especialista en endocrinología y metabolismo en el Hospital del Río, en Cuenca.<ref name="hdelrio" />
+
+=== Telemedicina ===
+Preside la Organización Internacional de Telemedicina y Telesalud (OITT).<ref name="crn" /><ref name="venezolano" /> Ha promovido el uso de la plataforma de telemedicina MEDDI Diabetes para la atención de personas con diabetes.<ref name="saludiario" /> En la [[Asociación Latinoamericana de Diabetes]] (ALAD) coordina el grupo de Salud Digital y Diabetes.{{cita requerida}}
+
+== Publicaciones ==
+=== Artículos (selección) ===
+* Hernández DE, Masquelier B, Pérez O, Oliver M, Fleury HJ. «Human herpesvirus 8 variants in Venezuelan patients with AIDS-related Kaposi sarcoma». ''Clin Infect Dis''. 2003;36(3):385-6.<ref name="cid2003" />
+* Pérez de Carvelli O, Torres González Á, Espinosa García O. «Niveles de 25-hidroxivitamina D en la población que acude al Servicio de Endocrinología del IESS, Azogues–Ecuador, 2017». ''Rev Med HJCA''. 2018;10(2):133-8.<ref name="hjca2018" />
+
+=== Libros ===
+* ''Diabetes. Guía de consejos médicos para pacientes y sus familiares'' (2010).{{cita requerida}}
+* ''Controlando la diabetes en un click'' (2020).{{cita requerida}}
+* ''Transforma tu consulta al mundo digital'' (2020), en coautoría con Miguel Guevara.{{cita requerida}}
+
+== Reconocimientos ==
+* Premio Dr. Moros Ghersi a la mejor tesis del año, de la Sociedad Venezolana de Medicina Interna (2003).{{cita requerida}}
+* Premio en Ciencias de la Salud (&laquo;Health Sciences&raquo;) otorgado por la sociedad SIISDET (2022).<ref name="venezolano" /><ref name="somostuvoz" />
+
+== Referencias ==
+{{listaref|refs=
+<ref name="hjca2018">{{cita publicación |apellidos1=Pérez de Carvelli |nombre1=Omidres de la Consolación |apellidos2=Torres González |nombre2=Álvaro |apellidos3=Espinosa García |nombre3=Odalis |título=Niveles de 25-hidroxivitamina D en la población que acude al Servicio de Endocrinología del IESS, Azogues–Ecuador, 2017 |publicación=Revista Médica HJCA |volumen=10 |número=2 |páginas=133-138 |año=2018 |doi=10.14410/2018.10.2.ao.21 |url=https://revistamedicahjca.iess.gob.ec/ojs/index.php/HJCA/article/view/120}}</ref>
+<ref name="cid2003">{{cita publicación |apellidos1=Hernández |nombre1=Dimas E. |apellidos2=Masquelier |nombre2=Bernard |apellidos3=Pérez |nombre3=Omidres |apellidos4=Oliver |nombre4=Margarita |apellidos5=Fleury |nombre5=Hervé J. A. |título=Human herpesvirus 8 variants in Venezuelan patients with AIDS-related Kaposi sarcoma |publicación=Clinical Infectious Diseases |volumen=36 |número=3 |páginas=385-386 |año=2003 |doi=10.1086/346041 |pmid=12539086}}</ref>
+<ref name="hdelrio">{{cita web |título=Directorio médico: Endocrinología |url=https://www.hospitaldelrio.com.ec/directorio-medico/endocrinologia/18/1/ |editorial=Hospital Universitario del Río |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="venezolano">{{cita web |título=Omidres Pérez, médico venezolana, gana premio por hallazgos contra la diabetes |url=https://elvenezolanonews.com/2022/03/09/omidres-perez-medico-venezolana-gana-premio-por-hallazgos-contra-la-diabetes/ |obra=El Venezolano News |fecha=9 de marzo de 2022 |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="somostuvoz">{{cita web |título=Doctora Omidres Pérez recibirá premio Health Sciences por su investigación contra la diabetes |url=https://somostuvoz.net/doctora-omidres-perez-recibira-premio-health-sciences-por-su-investigacion-contra-la-diabetes/ |obra=Somos Tu Voz |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="crn">{{cita web |título=Dra. Omidres Pérez: La telemedicina minimiza inconvenientes de la diabetes |url=https://crn.com.ve/salud/dra-omidres-perez-la-telemedicina-minimiza-inconvenientes-de-la-diabetes/ |obra=Circuito Regional de Noticias |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="diabeteshoy">{{cita web |título=La telemedicina: un nuevo amanecer en la autogestión de la diabetes |url=https://revistadiabeteshoy.org/la-telemedicina-un-nuevo-amanecer-en-la-autogestion-de-la-diabetes/ |obra=Revista Diabetes Hoy |fechaacceso=12 de octubre de 2026}}</ref>
+<ref name="saludiario">{{cita web |título=Entrevista Saludiario: Dra. Omidres Pérez de Carvelli experta en Diabetes |url=https://www.saludiario.com/entrevista-saludiario-dra-omidres-perez-de-carvelli-experta-en-diabetes/ |obra=Saludiario |fechaacceso=12 de octubre de 2026}}</ref>
+}}
+
+== Enlaces externos ==
+* [https://orcid.org/0000-0002-9615-6848 Perfil en ORCID]
+
+{{Control de autoridades}}
+
+[[Categoría:Médicos de Venezuela]]
+[[Categoría:Endocrinólogos]]
+[[Categoría:Emigrantes venezolanos hacia Ecuador]]
